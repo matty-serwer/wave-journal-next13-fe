@@ -6,8 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --black: rgb(0, 0, 0);
-  --white: rgb(255, 255, 255);
+  --black: rgb(2, 6, 8);
+  --white: rgb(244, 240, 250);
+  --primary: rgb(147, 233, 190);
+  --primary-light: rgb(182, 233, 207);
+  --secondary: rgb(233, 147, 190);
+  --secondary-light: rgb(233, 182, 207);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,11 +23,43 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--secondary-light);
   background: linear-gradient(
           to bottom,
           transparent,
           rgb(var(--background-end-rgb))
   )
   rgb(var(--background-start-rgb));
+}
+
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: var(--secondary);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+.container {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.row {
+  gap: 1rem;
+}
+
+.column {
+  padding: 1rem;
 }
